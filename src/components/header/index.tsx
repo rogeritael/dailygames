@@ -31,7 +31,7 @@ export default function Header(){
                     <Timer />
                     <Link href="/profile" className='flex items-center gap-1 px-8 py-1.5 bg-amber-600 rounded-md'>
                         <LiaGamepadSolid size={34} color="fff" />
-                        <p className='text-gray-600 font-medium uppercase text-white'>Login</p>
+                        <p className='font-medium uppercase text-white'>Login</p>
                     </Link>
                 </div>
             </div>
