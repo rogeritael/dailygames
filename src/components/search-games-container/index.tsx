@@ -10,7 +10,8 @@ interface SearchProps {
 
 async function getGames(title: string){
     try {
-        const response = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&title=${title}`, {next: { revalidate: 320 }});
+        const decodedTitle = decodeURI(title);
+        const response = await fetch(`${process.env.NEXT_API_URL}/next-api/?api=game&title=${decodedTitle}`, {next: { revalidate: 320 }});
 
         return response.json();
     } catch(e){

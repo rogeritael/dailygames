@@ -16,7 +16,7 @@ export default async function Search({ params }: SearchProps){
         <main className="w-full">
             <Container>
                 <Input />
-                <h2 className="font-bold text-xl mt-8 mb-5">Resultado de pesquisa para: <span className="font-normal">{title}</span></h2>
+                <h2 className="font-bold text-xl mt-8 mb-5">Resultado de pesquisa para: <span className="font-normal">{decodeURI(title)}</span></h2>
                 <SearchGamesContainer params={params} />
                 
             </Container>
